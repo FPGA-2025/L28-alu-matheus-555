@@ -44,7 +44,7 @@ module Alu (
             end
     
             GREATER_EQUAL: begin
-                ALU_RD_o = ALU_RS1_i >= ALU_RS2_i;
+                ALU_RD_o = $signed(ALU_RS1_i) >= $signed(ALU_RS2_i);
             end
     
             GREATER_EQUAL_U: begin
@@ -52,7 +52,7 @@ module Alu (
             end
     
             SLT: begin
-                ALU_RD_o = ALU_RS1_i < ALU_RS2_i;
+                ALU_RD_o = $signed(ALU_RS1_i) < $signed(ALU_RS2_i);
             end
     
             SLT_U: begin
